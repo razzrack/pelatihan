@@ -99,10 +99,12 @@ class Profil extends React.Component {
                             <Col>
                                 <h3>Data Pribadi</h3>
                                 <span>Isi data diri anda untuk pengguna baru atau ubah data diri untuk pengguna lama</span>
+                                <h3> </h3>
                 <Form 
                     onSubmit={this.submitData.bind(this)}
                     >
                         <FormGroup>
+                            <Label for="exampleNumber">NIP</Label>
                             <Input
                                 type="text"
                                 name="emp_id"
@@ -113,6 +115,7 @@ class Profil extends React.Component {
                             />
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">Peran Karyawan</Label>
                             <Input
                                 type="text"
                                 name="emp_role"
@@ -123,6 +126,7 @@ class Profil extends React.Component {
                             disabled />
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">Nama Karyawan</Label>
                             <Input
                                 type="text"
                                 name="emp_name"
@@ -133,36 +137,64 @@ class Profil extends React.Component {
                             />
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">Departemen Karyawan</Label>
                             <Input
-                                type="text"
+                                type="select"
                                 name="emp_department"
                                 id="data-input"
                                 placeholder="Departemen Karyawan"
                                 value={this.state.emp_department}
                                 onChange={this.change.bind(this)}
-                            />
+                            >
+                            <option value="Keuangan dan Administrasi" onChange={this.change.bind(this)}>Keuangan dan Administrasi</option>
+                            <option value="Bisnis Produk Hankam" onChange={this.change.bind(this)}>Bisnis Produk Hankam</option>
+                            <option value="Bisnis Produk Industrial" onChange={this.change.bind(this)}>Bisnis Produk Industrial</option>
+                            <option value="Teknologi dan Pengembangan" onChange={this.change.bind(this)}>Teknologi dan Pengembangan</option>
+                            </Input>
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">Divisi Karyawan</Label>
                             <Input
-                                type="text"
+                                type="select"
                                 name="emp_division"
                                 id="data-input"
                                 placeholder="Divisi Karyawan"
                                 value={this.state.emp_division}
                                 onChange={this.change.bind(this)}
-                            />
+                            >
+                            <option value="Perencanaan dan Kinerja Perusahaan">Perencanaan dan Kinerja Perusahaan</option>
+                            <option value="Akuntansi dan Keuangan">Akuntansi dan Keuangan</option>
+                            <option value="Human Capital dan Pengembangan Organisasi">Human Capital dan Pengembangan Organisasi</option>
+                            <option value="Sistem Informasi Manajemen">Sistem Informasi Manajemen</option>
+                            <option value="Bisnis Hankam">Bisnis Hankam</option>
+                            <option value="Senjata">Senjata</option>
+                            <option value="Munisi">Munisi</option>
+                            <option value="Kendaraan Khusus">Kendaraan Khusus</option>
+                            <option value="Bisnis Industrial">Bisnis Industrial</option>
+                            <option value="Alat Berat">Alat Berat</option>
+                            <option value="Tempa-Cor dan Alat Perkeretaapian">Tempa-Cor dan Alat Perkeretaapian</option>
+                            <option value="Bahan Peledak Komersial">Bahan Peledak Komersial</option>
+                            <option value="Pengembangan Produk dan Proses">Pengembangan Produk dan Proses</option>
+                            <option value="Quality Assurance dan K3LH">Quality Assurance dan K3LH</option>
+                            <option value="Supply Chain">Supply Chain</option>
+                            </Input>
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">Jenis Kelamin Karyawan</Label>
                             <Input
-                                type="text"
+                                type="select"
                                 name="emp_gender"
                                 id="data-input"
                                 placeholder="Jenis Kelamin Karyawan"
                                 value={this.state.emp_gender}
                                 onChange={this.change.bind(this)}
-                            />
+                            >
+                                <option value="Laki-Laki">Laki-Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </Input>
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">Tempat Lahir Karyawan</Label>
                             <Input
                                 type="text"
                                 name="emp_birth_place"
@@ -173,8 +205,9 @@ class Profil extends React.Component {
                             />
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">Tanggal Lahir Karyawan</Label>
                             <Input
-                                type="text"
+                                type="date"
                                 name="emp_birth_date"
                                 id="data-input"
                                 placeholder="Tanggal Lahir Karyawan"
@@ -183,6 +216,7 @@ class Profil extends React.Component {
                             />
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">Email Karyawan</Label>
                             <Input
                                 type="text"
                                 name="emp_email"
@@ -193,6 +227,7 @@ class Profil extends React.Component {
                             />
                         </FormGroup>
                         <FormGroup>
+                            <Label for="exampleNumber">No HP Karyawan</Label>
                             <Input
                                 type="text"
                                 name="emp_phone"

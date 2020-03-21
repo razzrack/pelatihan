@@ -15,8 +15,7 @@ class Events extends React.Component {
     constructor(){
         super();
         this.state = {
-            events: [],
-            pelatih: []
+            events: []
         }   
     }
 
@@ -50,91 +49,32 @@ class Events extends React.Component {
                 <Jumbotron fluid>
                     <Container fluid>
                     <Row>
-                            <Col md={9}>
-                                <Row className="ml-5">
-                                    <Col>
-                                        <h3>Acara Pelatihan</h3>
-                                    </Col>
-                                </Row>
-                                <Row form className="ml-4 mt-2">
-                                    <Col md={4}>
-                                        <FormGroup>
-                                            {/* <Input type="search"
-                                                name="searchTrainer"
-                                                id="searchTrainer"
-                                                placeholder="Cari Trainer"
-                                                className="ml-5 mb-2 mr-sm-2 mb-sm-0"/> */}
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
-                                <Row className="ml-5 mt-2">
-                                    {materiCard}
-                                </Row>
-                            </Col>
-                            <Col sm={3}>
-                                <ProfileCard />
-                            </Col>
-                        </Row>
-                    </Container>
-                </Jumbotron>
-                <Jumbotron fluid>
-                    <Container fluid>
-                    <Row>
-                            <Col md={9}>
-                                <Row className="ml-5">
-                                    <Col>
-                                        <h3>Rencana Acara Pelatihan</h3>
-                                    </Col>
-                                </Row>
-                                <Row form className="ml-4 mt-2">
-                                    <Col md={4}>
-                                        <FormGroup>
-                                            {/* <Input type="search"
-                                                name="searchTrainer"
-                                                id="searchTrainer"
-                                                placeholder="Cari Trainer"
-                                                className="ml-5 mb-2 mr-sm-2 mb-sm-0"/> */}
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
-                                <Row className="ml-5 mt-2">
-                                    {materiCard}
-                                </Row>
-                            </Col>
-                            <Col sm={3}>
-                                {/* {profileCard} */}
-                            </Col>
-                        </Row>
-                    </Container>
-                </Jumbotron>
-                <Jumbotron fluid>
-                    <Container fluid>
-                    <Row>
-                            <Col md={9}>
-                                <Row className="ml-5">
-                                    <Col>
-                                        <h3>Provider Pelatihan</h3>
-                                    </Col>
-                                </Row>
-                                <Row form className="ml-4 mt-2">
-                                    <Col md={4}>
-                                        <FormGroup>
-                                            {/* <Input type="search"
-                                                name="searchTrainer"
-                                                id="searchTrainer"
-                                                placeholder="Cari Trainer"
-                                                className="ml-5 mb-2 mr-sm-2 mb-sm-0"/> */}
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
-                                <Row className="ml-5 mt-2">
-                                    {materiCard}
-                                </Row>
-                            </Col>
-                            <Col sm={3}>
-                                {/* {profileCard} */}
-                            </Col>
-                        </Row>
+                        <Col md={2}></Col>
+                        <Col md={8}>
+                            <Row className="ml-5">
+                                <Col>
+                                    <h3>Acara Pelatihan</h3>
+                                </Col>
+                            </Row>
+                            <Row form className="ml-4 mt-2">
+                                <Col md={4}>
+                                    <FormGroup>
+                                        {/* <Input type="search"
+                                            name="searchTrainer"
+                                            id="searchTrainer"
+                                            placeholder="Cari Trainer"
+                                            className="ml-5 mb-2 mr-sm-2 mb-sm-0"/> */}
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row className="ml-5 mt-2">
+                                {materiCard}
+                            </Row>
+                        </Col>
+                        <Col sm={2}>
+                            {/* {profileCard} */}
+                        </Col>
+                    </Row>
                     </Container>
                 </Jumbotron>
                 <Footer/>

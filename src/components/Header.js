@@ -32,18 +32,21 @@ class Header extends Component {
         return (
             <div>
                 <Navbar color="dark" light expand="md">
-                    <NavbarBrand><Link to="/">Pelatihan</Link></NavbarBrand>
+                    <NavbarBrand><Link to="/">Pengajuan Pelatihan</Link></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem className="mr-4">
-                                <Link to="/trainer">Trainer</Link>
+                                <Link to="/event">Daftar Pelatihan</Link>
                             </NavItem>
                             <NavItem className="mr-4">
-                                <Link to="/event">Event</Link>
+                                <Link to="/newdata">Ajukan Pelatihan</Link>
                             </NavItem>
                             <NavItem className="mr-4">
-                                <Link to="/about">About</Link>
+                                <Link to="/verif">Verifikasi Pelatihan</Link>
+                            </NavItem>
+                            <NavItem className="mr-4">
+                                <Link to="/about">Tentang Kami</Link>
                             </NavItem>
                             <NavItem className="mr-4">
                                 <Link onClick={this.toggle}>Login/Register</Link>

@@ -1,39 +1,43 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './Home';
 import HomeAuth from './HomeAuth';
-import Trainer from './Trainer';
-import TrainerAuth from './Trainers';
 import Event from './Event';
-import EventAuth from './Events';
+import Events from './Events';
 import DetailEvent from './DetailEvent';
 import Profil from './Profil';
 import Auth from './Auth';
-import Data from './Data';
+import Login from './Login';
 import NewData from './NewData';
+import NewDatas from './NewDatas';
+import NewEvent from './NewEvent';
+import NewEvents from './NewEvents';
+import DataVerif from './DataVerif';
+import DetailVerif from './DetailVerif';
+import Submission from './cards/SubmissionCard';
 import Trainee from './Trainee';
 import About from './About';
 import AboutAuth from './Abouts';
 import Proposal from './Proposal';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
      <BrowserRouter>
       <Switch>
-        <Route path={'/'} exact component={Home}/>
-        <Route path={'/trainer'} component={Trainer}/>
-        <Route path={'/event'} component={Event}/>
-        <Route path={'/about'} component={About}/>
+        <Route path={'/'} exact component={Login}/>
         <Auth>
           <Route path={'/homeauth'} component={HomeAuth} />
-          <Route path={'/data'} component={Data} />
+          <Route path={'/eventlist'} component={Events}/>
           <Route path={'/newdata'} component={NewData} />
-          <Route path={'/trainers'} component={TrainerAuth}/>
-          <Route path={'/events'} component={EventAuth}/>
-          <Route path={'/eventdet'} component={DetailEvent}/>
-          <Route path={'/proposals'} component={Proposal}/>
-          <Route path={'/trainees'} component={Trainee}/>
+          <Route path={'/newdata/:id'} component={NewData}/>
+          <Route path={'/veriflist'} component={DataVerif} />
+          <Route path={'/verif/:id'} component={DetailVerif} />
+          <Route path={'/neweventlist'} component={Event} />
+          <Route path={'/newevent/:id'} component={NewEvents} />
+          <Route path={'/about'} component={About}/>
           <Route path={'/abouts'} component={AboutAuth}/>
           <Route path={'/profile'} component={Profil}/>
         </Auth>

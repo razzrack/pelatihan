@@ -6,12 +6,13 @@ import { FormGroup, Input, Container, Jumbotron, Row, Col,
     CardBody, CardTitle, CardText,
     Button, Label,
     ListGroup, ListGroupItem, Form } from 'reactstrap';
-import { getJwt } from '../helpers/jwt';
+import { Redirect } from 'react-router-dom';
+import { getJwt } from '../helpers/jwt';   
 import HeaderAuth from './HeaderAuth';
 import Footer from './Footer';
-import NewEventCard from './cards/NewEventCard';
+import SubmissionCard from './cards/SubmissionCard';
 
-class Event extends React.Component {
+class DataVerif extends React.Component {
 
     constructor(props) {
       super(props);
@@ -58,7 +59,7 @@ class Event extends React.Component {
         let submissionCard = this.state.submissions.map(submission => {
             return (
                 <Col>
-                    <NewEventCard submission={submission} />
+                    <SubmissionCard submission={submission} />
                 </Col>
             )
         })
@@ -141,4 +142,4 @@ class Event extends React.Component {
     }  
 }
 
-export default Event;
+export default DataVerif;
